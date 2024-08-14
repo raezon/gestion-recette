@@ -1,15 +1,14 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!
+{% endblock %}
+
 {% block body %}
-	<h1>Ajouter un Ingr´edient</h1>
+
 	{{ form_start(form) }}
-	{{ form_row(form.nom) }}
-	{{ form_row(form.photo) }}
-	{{ form_row(form.quantity) }}
-	{{ form_row(form.save) }}
-	{% if form_errors(form) %}
-		<div class="alert alert-danger">
-			{{ form_errors(form) }}
-		</div>
-	{% endif %}
+	{{ form_widget(form) }}
+	<button class="btn">Enregistrer</button>
 	{{ form_end(form) }}
+
+
 {% endblock %}
